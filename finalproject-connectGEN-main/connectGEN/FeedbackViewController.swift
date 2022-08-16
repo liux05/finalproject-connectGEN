@@ -9,12 +9,27 @@ import UIKit
 
 class FeedbackViewController: UIViewController {
 
-    @IBOutlet weak var imageOne: UIImageView!
+    
+    @IBOutlet weak var darkest: UIImageView!
+    
+    @IBOutlet weak var secondDark: UIImageView!
+    
+    @IBOutlet weak var middle: UIImageView!
+    
+    @IBOutlet weak var secondLight: UIImageView!
+    
+    @IBOutlet weak var lightest: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        darkest.isHidden = true
+        secondDark.isHidden = true
+        middle.isHidden = true
+        secondLight.isHidden = true
+        lightest.isHidden = true
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,26 +45,49 @@ class FeedbackViewController: UIViewController {
     */
 
     @IBAction func oneStar(_ sender: UIButton) {
+        darkest.isHidden = false
+        secondDark.isHidden = true
+        middle.isHidden = true
+        secondLight.isHidden = true
+        lightest.isHidden = true
     }
     
     @IBAction func twoStar(_ sender: UIButton) {
+        darkest.isHidden = false
+        secondDark.isHidden = false
+        middle.isHidden = true
+        secondLight.isHidden = true
+        lightest.isHidden = true
+
     }
     
     @IBAction func threeStar(_ sender: UIButton) {
+        darkest.isHidden = false
+        secondDark.isHidden = false
+        middle.isHidden = false
+        secondLight.isHidden = true
+        lightest.isHidden = true
+
     }
     
     @IBAction func fourStar(_ sender: UIButton) {
+        darkest.isHidden = false
+        secondDark.isHidden = false
+        middle.isHidden = false
+        secondLight.isHidden = false
+        lightest.isHidden = true
+
     }
     
     @IBAction func fiveStar(_ sender: UIButton) {
+        darkest.isHidden = false
+        secondDark.isHidden = false
+        middle.isHidden = false
+        secondLight.isHidden = false
+        lightest.isHidden = false
+
     }
     
-}
-
-func setImage() {
-    imageOne: UIImage?
-    {for state: UIControl.State
-    }
 }
     
 

@@ -5,12 +5,37 @@
 //  Created by Scholar on 8/16/22.
 //
 
+
 import UIKit
+
+class ChecklistItem {
+    let title: String
+    var isChecked: Bool = false
+    
+    init(title: String){
+        self.title = title
+    }
+}
+
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
   var imagePicker = UIImagePickerController()
+
+    let items: [ChecklistItem] = [
+    "Movies",
+    "Reading",
+    "Sports",
+    "Gardening",
+    "Technology",
+    "Fashion"
+    ].compactMap({
+        ChecklistItem(title: $0)
+    })
     
-    
-    
+    private let tableView: UITableView = {
+        let table = UITableView()
+        
+        return table
+    }()
     
     @IBOutlet weak var imageDisplay: UIImageView!
     
