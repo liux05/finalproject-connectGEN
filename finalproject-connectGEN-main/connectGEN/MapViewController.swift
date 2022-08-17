@@ -7,6 +7,10 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+
+
+
 
 func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard annotation is MKPointAnnotation else { return nil }
@@ -24,10 +28,16 @@ func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnota
     return annotationView
 }
 class MapViewController: UIViewController {
+    
     @IBOutlet weak var mapView: MKMapView!
+
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    @IBOutlet weak var locationInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let initialLocation = CLLocation(latitude: 39.954835, longitude: -75.178234)
         mapView.centerToLocation(initialLocation)
         let marketStreet = MKPointAnnotation()
@@ -39,7 +49,26 @@ class MapViewController: UIViewController {
         nursingHome1.coordinate = CLLocationCoordinate2D(latitude:39.954730, longitude: -75.194610)
         mapView.addAnnotation(nursingHome1)
 
+        
+        
+        var geocoder = CLGeocoder()
+        geocoder.geocodeAddressString("your address") {
+            placemarks, error in
+            let placemark = placemarks?.first
+            let lat = placemark?.location?.coordinate.latitude
+            let lon = placemark?.location?.coordinate.longitude
+            print((lat), (lon))
+        }
+            // Use your location
+    }
 
+    @IBAction func submitTapped(_ sender: UIButton) {
+        if locationInput.text == "3675 Market St" {
+            locationLabel.text = "Your nearest location is: 3675 Market St "
+        }
+        
+    }
+    
         // Do any additional setup after loading the view.
     }
     
@@ -54,7 +83,7 @@ class MapViewController: UIViewController {
     }
     */
 
-}
+
 
 private extension MKMapView {
   func centerToLocation(
