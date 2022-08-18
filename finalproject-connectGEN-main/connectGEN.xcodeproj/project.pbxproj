@@ -19,6 +19,9 @@
 		BD710D3A28AD2CBD00779E41 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD710D3928AD2CBD00779E41 /* InterestsViewController.swift */; };
 		BD710D3E28AD3B8700779E41 /* OrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD710D3D28AD3B8700779E41 /* OrganizationViewController.swift */; };
 		BD8F3AC228ABDEE700DD984F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F3AC128ABDEE700DD984F /* ProfileViewController.swift */; };
+		BDA0919028AE763D006DA2E1 /* LanguageIndivViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0918F28AE763D006DA2E1 /* LanguageIndivViewController.swift */; };
+		BDA0919228AE7652006DA2E1 /* LanguageOrganizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0919128AE7652006DA2E1 /* LanguageOrganizViewController.swift */; };
+		BDA0919428AE91CE006DA2E1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0919328AE91CE006DA2E1 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		BD710D3928AD2CBD00779E41 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		BD710D3D28AD3B8700779E41 /* OrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewController.swift; sourceTree = "<group>"; };
 		BD8F3AC128ABDEE700DD984F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BDA0918F28AE763D006DA2E1 /* LanguageIndivViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageIndivViewController.swift; sourceTree = "<group>"; };
+		BDA0919128AE7652006DA2E1 /* LanguageOrganizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageOrganizViewController.swift; sourceTree = "<group>"; };
+		BDA0919328AE91CE006DA2E1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				BD710D3928AD2CBD00779E41 /* InterestsViewController.swift */,
 				BD710D3D28AD3B8700779E41 /* OrganizationViewController.swift */,
 				BD1F358728AC01D600651AC3 /* FeedbackViewController.swift */,
+				BDA0918F28AE763D006DA2E1 /* LanguageIndivViewController.swift */,
+				BDA0919328AE91CE006DA2E1 /* ChatViewController.swift */,
+				BDA0919128AE7652006DA2E1 /* LanguageOrganizViewController.swift */,
 				BD26291428AAD42100A0AE90 /* Main.storyboard */,
 				BD26291A28AAD42200A0AE90 /* Assets.xcassets */,
 				BD26291C28AAD42200A0AE90 /* LaunchScreen.storyboard */,
@@ -159,12 +168,15 @@
 				BD710D3A28AD2CBD00779E41 /* InterestsViewController.swift in Sources */,
 				BD8F3AC228ABDEE700DD984F /* ProfileViewController.swift in Sources */,
 				BD26291328AAD42100A0AE90 /* ViewController.swift in Sources */,
+				BDA0919228AE7652006DA2E1 /* LanguageOrganizViewController.swift in Sources */,
 				BD26290F28AAD42100A0AE90 /* AppDelegate.swift in Sources */,
 				BD710D3E28AD3B8700779E41 /* OrganizationViewController.swift in Sources */,
 				BD1F358828AC01D600651AC3 /* FeedbackViewController.swift in Sources */,
 				BD26291128AAD42100A0AE90 /* SceneDelegate.swift in Sources */,
 				BD26292628AADDF300A0AE90 /* MapViewController.swift in Sources */,
 				BD26291928AAD42100A0AE90 /* connectGEN.xcdatamodeld in Sources */,
+				BDA0919428AE91CE006DA2E1 /* ChatViewController.swift in Sources */,
+				BDA0919028AE763D006DA2E1 /* LanguageIndivViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-
-
 func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard annotation is MKPointAnnotation else { return nil }
 
@@ -40,16 +37,36 @@ class MapViewController: UIViewController {
         
         let initialLocation = CLLocation(latitude: 39.954835, longitude: -75.178234)
         mapView.centerToLocation(initialLocation)
+        
         let marketStreet = MKPointAnnotation()
         marketStreet.title = "3675 Market Street"
         marketStreet.coordinate = CLLocationCoordinate2D(latitude: 39.954835, longitude: -75.178234)
         mapView.addAnnotation(marketStreet)
+        
         let nursingHome1 = MKPointAnnotation()
         nursingHome1.title = "University City Rehab & Healthcare Center"
         nursingHome1.coordinate = CLLocationCoordinate2D(latitude:39.954730, longitude: -75.194610)
         mapView.addAnnotation(nursingHome1)
-
         
+        let nursingHome2 = MKPointAnnotation()
+        nursingHome2.title = "Penn Center for Rehabilitation and Care"
+        nursingHome2.coordinate = CLLocationCoordinate2D(latitude: 39.954731, longitude: -75.194611)
+        mapView.addAnnotation(nursingHome2)
+        
+        let nursingHome3 = MKPointAnnotation()
+        nursingHome3.title = "Rydal Park"
+        nursingHome3.coordinate = CLLocationCoordinate2D(latitude: 40.108320, longitude: -75.114660)
+        mapView.addAnnotation(nursingHome3)
+        
+        let nursingHome4 = MKPointAnnotation()
+        nursingHome4.title = "Philadelphia Nursing Home"
+        nursingHome4.coordinate = CLLocationCoordinate2D(latitude: 39.972740, longitude: -75.169724)
+        mapView.addAnnotation(nursingHome4)
+        
+        let nursingHome5 = MKPointAnnotation()
+        nursingHome5.title = "Blue Bell Place"
+        nursingHome5.coordinate = CLLocationCoordinate2D(latitude: 40.170400, longitude: -75.289120)
+        mapView.addAnnotation(nursingHome5)
         
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString("your address") {
@@ -63,16 +80,18 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func submitTapped(_ sender: UIButton) {
-        if locationInput.text == "3675 Market St" {
-            locationLabel.text = "Your nearest location is: 3675 Market St "
+        if locationInput.text == "University City Science Center" {
+            locationLabel.text = "Your nearest sunset buddy is: 3675 Market St "
         }
+        else if locationInput.text == "Philadelphia Nursing Home" {
+            locationLabel.text = "Your nearest sunset buddy is: 2100 W Girard Ave"
         
     }
     
         // Do any additional setup after loading the view.
     }
     
-
+}
     /*
     // MARK: - Navigation
 
@@ -97,3 +116,4 @@ private extension MKMapView {
     setRegion(coordinateRegion, animated: true)
   }
 }
+
